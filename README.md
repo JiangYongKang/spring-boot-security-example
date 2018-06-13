@@ -7,7 +7,9 @@ $ mvn clean package spring-boot:run
 
 创建用户
 ```console
-$ curl http://127.0.0.1:8080/authentication/register -H "Content-type: application/json" -X POST -d '{ "username": "vincent", "password": "vincent" }'
+$ curl http://127.0.0.1:8080/authentication/register \
+> -H "Content-type: application/json" -X POST \
+> -d '{ "username": "vincent", "password": "vincent" }'
 {"id":1,"username":"vincent5","password":"$2a$10$uEr55195zaI7X/u2lLgpneeCMHvfxaxZVGaC/IWYAaFOXw.vTNEHW"}
 ```
 
