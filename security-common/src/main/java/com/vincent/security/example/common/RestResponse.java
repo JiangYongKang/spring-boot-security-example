@@ -1,4 +1,4 @@
-package com.vincent.security.common;
+package com.vincent.security.example.common;
 
 import lombok.Data;
 

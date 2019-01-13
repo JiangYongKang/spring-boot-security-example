@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <style type="text/css">
+        h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--/*@thymesVar id="message" type="java.lang.String"*/-->
+<h2 th:text="${message}"></h2>
+<h3 th:text="${#authorization.getAuthentication()}"></h3>
+</body>
+</html>

@@ -10,16 +10,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * Author: vincent
- * Date: 2019-01-13 13:10:00
+ * Date: 2019-01-13 14:40:00
  * Comment:
  */
 
 @Configuration
-public class HttpBasicSecurityConfig extends WebSecurityConfigurerAdapter {
+public class FormLoginSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.httpBasic()
+        httpSecurity.formLogin()
                 .and()
                 .authorizeRequests()
                 .anyRequest()

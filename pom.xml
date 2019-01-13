@@ -19,6 +19,7 @@
     <modules>
         <module>security-http-basic</module>
         <module>security-common</module>
+        <module>security-form-login</module>
     </modules>
 
     <dependencies>

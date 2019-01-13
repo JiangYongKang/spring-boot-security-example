@@ -1,6 +1,6 @@
 package com.vincent.security.example.controller;
 
-import com.vincent.security.common.RestResponse;
+import com.vincent.security.example.common.BaseController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/security")
-public class SecurityController {
+public class SecurityController extends BaseController {
 
     /**
      * 获取当前系统时间，需要登录后才可以访问
@@ -27,7 +27,7 @@ public class SecurityController {
     @GetMapping("/timestamp")
     public ResponseEntity<?> currentTimestamp() {
         log.info(currentUser().toString());
-        return ResponseEntity.ok(new RestResponse("当前系统时间：" + System.currentTimeMillis()));
+        return super.success("当前系统时间：" + System.currentTimeMillis());
     }
 
     /**
