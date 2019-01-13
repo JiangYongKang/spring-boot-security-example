@@ -20,6 +20,7 @@
         <module>security-http-basic</module>
         <module>security-common</module>
         <module>security-form-login</module>
+        <module>security-sms-login</module>
     </modules>
 
     <dependencies>
