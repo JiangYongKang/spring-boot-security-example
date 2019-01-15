@@ -21,6 +21,7 @@
         <module>security-common</module>
         <module>security-form-login</module>
         <module>security-sms-login</module>
+        <module>security-custom-form-login</module>
     </modules>
 
     <dependencies>
@@ -66,7 +67,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>3.8.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
