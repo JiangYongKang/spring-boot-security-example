@@ -8,8 +8,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.annotation.Resource;
-
 /**
  * Author: vincent
  * DateTime: 2019/1/15 21:27
@@ -23,8 +21,14 @@ public class CustomFormLoginSecurityConfig extends WebSecurityConfigurerAdapter 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
 
-        httpSecurity.formLogin().and()
+        // 使用表单登录，并告诉 Spring Security 授权请求的URL以及修改默认的字段名
+        httpSecurity.formLogin()
+                .loginPage("/login.html")
+                .loginProcessingUrl("/customFormLogin")
+                .usernameParameter("email")
+                .and()
 
+                // 首页和登录页面，未授权的用户也可以访问
                 .authorizeRequests()
                 .antMatchers("/index.html", "/login.html").permitAll()
 

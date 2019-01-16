@@ -5,6 +5,16 @@
     <title>login</title>
 </head>
 <body>
-    login
+<form action="/customFormLogin" method="post">
+    <div>
+        <label for="email">邮箱：</label>
+        <input type="email" id="email" name="email" placeholder="请输入邮箱：">
+    </div>
+    <div>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password" placeholder="请输入密码：">
+    </div>
+    <button type="submit">登录</button>
+</form>
 </body>
 </html>
